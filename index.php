@@ -80,14 +80,6 @@
         mysqli_query($link_db,"UPDATE usuarios SET creditos = $creditos_usuario WHERE id = $id_usuario");
     }
 
-    //    if ($_POST && isset($_POST['reset'])){
-    //        if($_POST['reset'] == true)
-    //            $_SESSION['creditos'] = 10;
-    //        unset($_POST['reset']);
-    //    }
-
-
-
     $db = mysqli_connect('127.0.0.1', 'root', '', 'arcade', 3307) or
     die("Error " . mysqli_error($db));
     $juegos = mysqli_query($db, "SELECT * FROM juegos") or die("Error " . mysqli_error($db));

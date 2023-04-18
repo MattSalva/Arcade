@@ -20,7 +20,7 @@
                     <?php
                     $db = mysqli_connect('127.0.0.1', 'root', '', 'arcade', 3307) or
                     die("Error " . mysqli_error($db));
-
+                    //DTJo=u*!PLEgR7Gi
                     if (isset($_POST['email'])  && isset($_POST['pswd'])){
                         $user = mysqli_fetch_array(mysqli_query($db, "SELECT * FROM usuarios WHERE mail LIKE '". $_POST['email'] . "';"));
                         if(isset($user)){
