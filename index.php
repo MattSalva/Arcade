@@ -121,6 +121,7 @@
 
     if(isset($_POST['cargar']) && $_POST['cargar'] == true){
         cargarCredito($user, $db);
+        unset($_POST['cargar']);
     }
 
     if (isset($_SESSION['usuario'])){
