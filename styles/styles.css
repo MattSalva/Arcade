@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5rem;
+    background-color: #fff;
+    background-image: url("../background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 32px;
+}
+
+h1 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+div {
+    text-align: center;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    border: 2px solid black;
+    display: block;
+    font-size: 2rem;
+    margin: 100px 700px;
+}
+
+h2 {
+    text-align: center;
+    color: #efefef;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 5rem 30rem;
+}
+
+h3 {
+    text-align: center;
+    color: red;
+
+}
+
+/* Nav Bar */
+
+
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #20a5be;
+    position: relative;
+}
+
+.nav > .nav-header {
+    display: inline;
+
+}
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    text-align: start;
+    margin-right: 80rem;
+
+
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+}
+
+.card-detalles {
+    text-align: center;
+    font-size: 30px;
+    color: wheat;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 5rem 5rem;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background: rgba(0, 0 ,0, 0.1);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+    color: #efefef;
+}
+
+.creditos-disponibles {
+    color: #efefef;
+}
+
+.reset-btn {
+    text-align: center;
+}
+
+
+
+@media (max-width:600px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(129, 0, 163, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid rgba(52, 255, 0, 0.98);
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+.recarga {
+    text-align: center;
+}
