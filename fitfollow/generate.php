@@ -1,7 +1,7 @@
 <?php
 $db = mysqli_connect("localhost", "root", "", "fitfollow", 3307);
 $datestring = date("Ymd",strtotime($_POST['exercisedate']));
-$file = fopen("workout". $datestring . ".txt", "w+");
+$file = fopen("workouts/files/workout". $datestring . ".txt", "w+");
 
 foreach ($_POST as $key => $val){
     if ($key == "exercisedate"){
@@ -19,7 +19,7 @@ foreach ($_POST as $key => $val){
         $query = "SELECT * FROM exercises WHERE id = " . $key;
         $exercise = mysqli_query($db, $query);
         $exercise = mysqli_fetch_array($exercise);
-        fwrite($file,"- $val - Sets: $exercise[2] - Reps $exercise[3] - Muscle Group $exercise[4] \n" ) ;
+        fwrite($file,"- $val - Sets: $exercise[2] - Reps $exercise[3] - Muscle Group $exercise[4]  \n" ) ;
     }
 }
 echo "Workout saved in file: " . "workout". $datestring . ".txt";

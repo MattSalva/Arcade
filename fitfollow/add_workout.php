@@ -19,7 +19,7 @@
     exercises_routines er ON exercises.id = er.exercise_id INNER JOIN routines r on er.routine_id = r.id WHERE r.id = " . $_GET['routines'];
       $res = mysqli_query($db, $query);
       $exercises = mysqli_fetch_all($res);
-      $routine =  mysqli_query($db, "SELECT name, difficulty FROM routines WHERe id = ". $_GET['routines']);
+      $routine =  mysqli_query($db, "SELECT name, difficulty FROM routines WHERE id = ". $_GET['routines']);
       $routine =  mysqli_fetch_array($routine);
       echo "<input type='hidden' id='routinename' name='routine' value=$routine[0]>";
       echo "<input type='hidden' id='routinedifficulty' name='difficulty' value=$routine[1]>";
@@ -28,15 +28,16 @@
           echo "<input type='checkbox' id='$exercise[1]' name='$exercise[0]' value='$exercise[1]'/>";
           echo "<label for='$exercise[1]'>$exercise[1]</label></br>";
       }
-
-
       ?>
 
 
+
       <input type="submit">
-        <br>
-        <a href="http://localhost:8080/fitfollow"><button>Go Back</button></a>
+
 
     </form>
+
+    <br>
+    <a href="http://localhost:8080/fitfollow"><button>Go Back</button></a>
 </body>
 </html>
